@@ -44,7 +44,7 @@ const Header = () => {
         <Link to='/shows'>
           <FaTv /> Shows
         </Link>
-        <Link to='/acount'>
+        <Link to='/auth'>
           <FaSignInAlt /> Sign In
         </Link>
       </NavActions>
