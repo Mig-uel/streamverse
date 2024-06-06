@@ -9,6 +9,9 @@ import {
 
 // Routes
 import Home from './screens/home.screen.jsx'
+import Movies from './screens/movies.screen.jsx'
+import Shows from './screens/shows.screen.jsx'
+import Auth from './screens/auth.screen.jsx'
 
 // UI Elements
 import App from './App.jsx'
@@ -19,6 +22,9 @@ const router = createBrowserRouter(
     <Route path='' element={<App />}>
       <Route element={<Body />}>
         <Route index path='' element={<Home />} />
+        <Route path='/movies' element={<Movies />} />
+        <Route path='/shows' element={<Shows />} />
+        <Route path='/auth' element={<Auth />} />
       </Route>
     </Route>
   )
