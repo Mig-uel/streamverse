@@ -7,11 +7,21 @@ import {
   RouterProvider,
 } from 'react-router-dom'
 
+// Routes
+import Home from './screens/home.screen.jsx'
+
 // UI Elements
 import App from './App.jsx'
+import Body from './components/body/body.component.jsx'
 
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route index path='/' element={<App />}></Route>)
+  createRoutesFromElements(
+    <Route path='' element={<App />}>
+      <Route element={<Body />}>
+        <Route index path='' element={<Home />} />
+      </Route>
+    </Route>
+  )
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
